@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="list">첫 번째 릿스트</li>
+        <li class="list">두 번째 릿스트</li>
+        <li class="list">세 번째 릿스트</li>
+        <li class="list">네 번째 릿스트</li>
+        <li class="list">다섯 번째 릿스트</li>
+    </ul> 
+</body>
+<script>
+    HTMLCollection.prototype.forEach = Array.prototype.forEach;
+    const list = document.getElementsByClassName("list");
+    console.log(list[0].parentElement);
+    const ul = list[0].parentElement;
+    ul.style.display = "flex";
+    list.forEach((li) => {
+        li.style.fontSize = "20px";
+    })
+</script>
+</html>
